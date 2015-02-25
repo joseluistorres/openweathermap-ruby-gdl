@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?id=4005539
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 25 Feb 2015 17:30:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":-103.33,"lat":20.67},"sys":{"message":0.0204,"country":"MX","sunrise":1424870160,"sunset":1424912194},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}],"base":"cmc stations","main":{"temp":298.304,"temp_min":298.304,"temp_max":298.304,"pressure":847.84,"sea_level":1024.63,"grnd_level":847.84,"humidity":34},"wind":{"speed":2.52,"deg":269.5},"clouds":{"all":0},"dt":1424882289,"id":4005539,"name":"Guadalajara","cod":200}
+    http_version: 
+  recorded_at: Wed, 25 Feb 2015 17:30:42 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?id=4005539
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 25 Feb 2015 17:34:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":-103.33,"lat":20.67},"sys":{"message":0.0204,"country":"MX","sunrise":1424870160,"sunset":1424912194},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01d"}],"base":"cmc stations","main":{"temp":298.304,"temp_min":298.304,"temp_max":298.304,"pressure":847.84,"sea_level":1024.63,"grnd_level":847.84,"humidity":34},"wind":{"speed":2.52,"deg":269.5},"clouds":{"all":0},"dt":1424882289,"id":4005539,"name":"Guadalajara","cod":200}
+    http_version: 
+  recorded_at: Wed, 25 Feb 2015 17:34:50 GMT
+recorded_with: VCR 2.9.3

@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "openweathermap-ruby-gdl"
   gem.homepage = "http://github.com/joseluistorres/openweathermap-ruby-gdl"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Consume a simple REST service}
+  gem.description = %Q{Ruby example of how to consume a REST service}
   gem.email = "jl@joseluistorres.me"
   gem.authors = ["JoseLuis Torres"]
   # dependencies defined in Gemfile

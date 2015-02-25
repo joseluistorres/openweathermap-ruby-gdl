@@ -1,29 +1,22 @@
-require 'simplecov'
-
-module SimpleCov::Configuration
-  def clean_filters
-    @filters = []
-  end
-end
-
-SimpleCov.configure do
-  clean_filters
-  load_adapter 'test_frameworks'
-end
-
-ENV["COVERAGE"] && SimpleCov.start do
-  add_filter "/.rvm/"
-end
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-
-require 'rspec'
+require 'rubygems'
+require 'webmock/rspec'
+require 'vcr'
 require 'openweathermap-ruby-gdl'
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+VCR.configure do |c|
+  c.cassette_library_dir = 'fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.allow_http_connections_when_no_cassette = true
+end
+VCR.turn_off! # turn off VCR by default
 
 RSpec.configure do |config|
+
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+
+  config.before(:all, :vcr_on) do
+    VCR.turn_on!
+  end
+
 
 end
